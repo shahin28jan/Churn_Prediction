@@ -1,0 +1,95 @@
+<html>
+<body>
+  <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <div style="background-image: url(https://png.pngtree.com/background/20210711/original/pngtree-ancient-poet-poetry-lyrics-large-size-background-picture-image_1112884.jpg);">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Churn Prediction By Shahin Anjum </a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+
+    <div class="container">
+
+  <form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" placeholder="Enter Age value (float)">
+    </div>
+
+        
+    <div class="form-group">
+        <label for="Subscription_Length_Months">Subscription_Length_Months:</label>
+        <input type="text" id="Subscription_Length_Months" name="Subscription_Length_Months" placeholder="Enter Subscription_Length_Months value (float)">
+    </div>
+
+      
+
+    <div class="form-group">
+        <label for="Monthly_Bill">Monthly_Bill:</label>
+        <input type="text" id="Monthly_Bill" name="Monthly_Bill" placeholder="Enter Monthly_Bill value (float)">
+    </div>
+
+    
+
+    <div class="form-group">
+        <label for="Total_Usage_GB">Total_Usage_GB:</label>
+        <input type="text" id="Total_Usage_GB" name="Total_Usage_GB" placeholder="Enter Total_Usage_GB value (float)">
+    </div>         
+
+   
+    
+    
+<div class="form-group">
+  <label for="Location">Location:</label>
+  <select id="Location" name="Location">
+    <option value="Los Angeles">Los Angeles</option>
+    <option value="New York">New York</option>
+    <option value="Miami">Miami</option>
+    <option value="Chicago">Chicago</option>
+    <option value="Houston">Houston</option>
+    </select>
+</div>
+
+
+<div class="form-group">
+    <label for="Gender">Gender:</label>
+    <select id="Gender" name="Gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+</div>
+
+  
+  
+
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</body>
+</html>
